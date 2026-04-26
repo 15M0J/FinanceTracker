@@ -27,7 +27,13 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -46,6 +52,12 @@
           "faceIDPermission": "Finance Tracker uses Face ID or device biometrics to protect dashboard access."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1a0208cd-c807-4777-b23e-405675413e2a"
+      }
+    },
+    "owner": "d33n"
   }
 }
