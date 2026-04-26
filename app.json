@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "FinanceTracker",
-    "slug": "FinanceTracker",
+    "name": "Finance Tracker",
+    "slug": "finance-tracker",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,9 +13,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hng.financetracker",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Finance Tracker uses the front camera for an on-device presence challenge.",
+        "NSFaceIDUsageDescription": "Finance Tracker uses Face ID or device biometrics to protect dashboard access."
+      }
     },
     "android": {
+      "package": "com.hng.financetracker",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -25,6 +31,21 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Finance Tracker uses the front camera for an on-device presence challenge."
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Finance Tracker uses Face ID or device biometrics to protect dashboard access."
+        }
+      ]
+    ]
   }
 }
